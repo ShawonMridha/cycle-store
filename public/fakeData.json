@@ -1,0 +1,62 @@
+[
+    {
+        "name":"Hero",
+        "price":"30000",
+        "description":"Based out of Punjab, it not only exports to more than 70 countries but has also been active in India with multiple models for six decades now.",
+        "img":"https://www.marketingmind.in/wp-content/uploads/2020/01/point-8-700x428.png"
+    },
+    {
+        "name":"Montra",
+        "price":"25000",
+        "description":"The company believes in riding bicycles first, providing multiple models, a warranty and additional bike accessories as and when it is required.",
+        "img":"https://lh3.googleusercontent.com/proxy/ZKhweXREBUwtes-2kCEP0306aueJ5tgB7mQjzOzdnFN7xu-isQqhEo2R8034hp2mvIy_YL7UBbm7Zdb1s-VKLnKBdxNhSzsDq5ANoEz8KAuDHNAKL9Zj0wbPNZlqeqJCZjw1lngNpbQvTX8"
+    },
+    {
+        "name":"Firefox",
+        "price":"20000",
+        "description":"With delivery to most parts of the country, this brand gives the best accessories and technician help to any customer.",
+        "img":"https://images.cyclingfactory.be/fam_Noah_image_1024x.png"
+    },
+    {
+        "name":"Alchemy Bicycles",
+        "price":"28000",
+        "description":"To build the best Bicycle in the world” is the motto of Alchemy Bicycles. It was their main mission when they started in 2008",
+        "img":"https://bikexchange.com/wp-content/uploads/2020/11/Arktos-29-Vanilla-XTR-12-Speed.jpg"
+    },
+    {
+        "name":"All-City Cycles",
+        "price":"35000",
+        "description":"With delivery to most parts of the country, this brand gives the best accessories and technician help to any customer.",
+        "img":"https://allcitycycles.com/files/studio_images/all-city-zig-zag-ultegra-bike-sunset-glow-BK9212-1500x1000.jpg"
+    },
+    {
+        "name":"Canyon Bicycles",
+        "price":"40000",
+        "description":"Canyon Bicycles are favored by seasoned cyclists, or by anyone who has been looking for bikes with plenty of engineering behind the build.",
+        "img":"https://www.canyon.com/dw/image/v2/BCML_PRD/on/demandware.static/-/Library-Sites-canyon-shared/default/dw5b1b4f69/images/plp/Gravel/CEC-GrailON-gallery-relaxedposition.jpg?sw=848"
+    },
+    {
+        "name":"Devinci Cycles",
+        "price":"27000",
+        "description":"From road to carbon and dual-suspension line-ups, Devinci is a top name in the game",
+        "img":"https://www.jensonusa.com/globalassets/product-images---all-assets/devinci/bi001804-purple-ghost.jpg?w=1000&quality=85"
+    },
+    {
+        "name":"Diamondback Bikes",
+        "price":"18000",
+        "description":"Washington-based bike brand Diamondback is among the best-known brands in the USA. Starting as a BMX bike manufacturer",
+        "img":"https://bikexchange.com/wp-content/uploads/2021/10/diamondbackdivision-595x350.png"
+    },
+    {
+        "name":"Electra Bikes",
+        "price":"17000",
+        "description":"rhaps most famous for their revival of the beach cruiser bicycle, Electra is one of the most visible bike brands in the US.",
+        "img":"https://bikexchange.com/wp-content/uploads/2021/01/electrabikelogo-e1614261723502.png"
+    },
+    {
+        "name":"Ghost Cycles",
+        "price":"19000",
+        "description":"The brand Ghost Bikes is no longer a ghost in the cycling world. This German-based bicycle company has been massively popular in Europe ",
+        "img":"https://bikexchange.com/wp-content/uploads/2020/04/Ghost.png"
+    }
+]
