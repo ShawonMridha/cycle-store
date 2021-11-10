@@ -24,7 +24,7 @@ const Register = () => {
             alert('Your password didnt match')
             return
         }
-        registerUser(loginData.email, loginData.password);
+        registerUser(loginData.email, loginData.password, loginData.name);
         e.preventDefault();
         // console.log( loginData.email)
     }
@@ -32,6 +32,10 @@ const Register = () => {
     return (
         <div>
            { !isLoading &&<Form onSubmit={handleLoginSubmit}>
+  <Form.Group className="mb-3 w-50" controlId="formBasicEmail" >
+    <Form.Label>Name</Form.Label>
+    <Form.Control type="text" placeholder="Name" onBlur={handleOnBlur} name="name"/>
+  </Form.Group>
   <Form.Group className="mb-3 w-50" controlId="formBasicEmail" >
     <Form.Label>Email address</Form.Label>
     <Form.Control type="email" placeholder="Enter email" onBlur={handleOnBlur} name="email"/>
