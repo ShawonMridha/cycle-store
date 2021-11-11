@@ -1,4 +1,5 @@
 import React from 'react';
+import { Container, Navbar } from 'react-bootstrap';
 import {
     BrowserRouter as Router,
     Switch,
@@ -14,24 +15,48 @@ import ManageProduct from '../ManageProduct/ManageProduct';
 import MyOrders from '../MyOrders/MyOrders';
 import Pay from '../Pay/Pay';
 import Review from '../Review/Review';
+import './Dashboard.css'
 
   
 
 const Dashboard = () => {
     let { path, url } = useRouteMatch();
-    const{admin}= useAuth();
+    const{admin, logout}= useAuth();
+    console.log(admin)
     return (
-        <div>
-            <h3>This is Dashboard</h3>
+        <>
+
+<Navbar bg="primary" variant="dark" sticky="top" collapseOnSelect expand="lg" >
+                <Container>
+                <Navbar.Brand href="#home">Admin And User</Navbar.Brand>
+                    <Navbar.Toggle />
+                    <Navbar.Collapse className="justify-content-end color">
+            {admin?
+                <div>
+                <Link to={`${url}/manageOrders`}>Manage All Orders</Link>
+               <Link to={`${url}/addProduct`}>Add A Product</Link>
+               <Link to={`${url}/makeAdmin`}>Make Admin</Link>
+               <Link to={`${url}/manageProduct`}>Manage Products</Link>
+               
+                <button onClick={logout}>Logout</button>
+                
+                </div>
+               :
+               <div>
             <Link to={`${url}/rendering`}>Dashboard</Link>
             <Link to={`${url}/pay`}>Pay</Link>
             <Link to={`${url}/myOrders`}>My Orders</Link>
             <Link to={`${url}/review`}>Review</Link>
-            <Link to={`${url}/logout`}>Logout</Link>
-            <Link to={`${url}/manageOrders`}>Manage All Orders</Link>
-            <Link to={`${url}/addProduct`}>Add A Product</Link>
-            <Link to={`${url}/makeAdmin`}>Make Admin</Link>
-            <Link to={`${url}/manageProduct`}>Manage Products</Link>
+           
+             <button onClick={logout}>Logout</button>
+           
+               </div>
+               
+             }
+            
+            </Navbar.Collapse>
+                </Container>
+         </Navbar>
 
 
 
@@ -62,8 +87,12 @@ const Dashboard = () => {
         </Route>
         
       </Switch>
-        </div>
+        </>
     );
 };
 
 export default Dashboard;
+
+
+
+          

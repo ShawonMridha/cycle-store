@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { Container, Row } from 'react-bootstrap';
+import DataReview from '../DataReview/DataReview';
 import Show from '../Show/Show';
 
 const Explore = () => {
     const[allData, setAllData]= useState([]);
     useEffect(()=>{
-        fetch('http://localhost:5000/products')
+        fetch('https://guarded-everglades-58080.herokuapp.com/products')
         .then(res=>res.json())
         .then(data=>setAllData(data))
     },[])
@@ -19,6 +20,7 @@ const Explore = () => {
               }
            </Row>
             </Container>
+           <DataReview></DataReview>
         </div>
     );
 };

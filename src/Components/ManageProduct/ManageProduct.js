@@ -1,9 +1,16 @@
 import React from 'react';
+import Explore from '../Explore/Explore';
+import ReviewDetails from '../Review/ReviewDetails';
+
+
+
 
 const ManageProduct = () => {
     return (
         <div>
-            <h3>This is ManageProduct page</h3>
+           <h3>oijfodgkogfker</h3>
+           <Explore></Explore>
+           <ReviewDetails></ReviewDetails>
         </div>
     );
 };

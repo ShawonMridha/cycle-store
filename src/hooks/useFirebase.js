@@ -15,13 +15,15 @@ const useFirebase = () =>{
     const auth = getAuth();
     const googleProvider = new GoogleAuthProvider();
 
-    const registerUser = (email, password, name)=>{
+    const registerUser = (email, password, name,location, history)=>{
         setIsLoading(true);
         createUserWithEmailAndPassword(auth, email, password)
         .then((userCredential) => {
             setAuthError('');
             const newUser = {email, displayName: name};
             setUser(newUser)
+            const destination = location?.state?.form || '/';
+            history.replace(destination)
             // send name after creation
             saveUser(email,name, 'POST');
             updateProfile(auth.currentUser, {
@@ -84,7 +86,7 @@ const useFirebase = () =>{
     },[])
 
     useEffect(()=>{
-      fetch(`http://localhost:5000/users/${user.email}`)
+      fetch(`https://guarded-everglades-58080.herokuapp.com/users/${user.email}`)
       .then(res=>res.json())
       .then(data=>setAdmin(data.admin))
     },[user.email])
@@ -103,7 +105,7 @@ const useFirebase = () =>{
 
     const saveUser = (email, displayName, method) =>{
       const user = {email, displayName};
-      fetch('http://localhost:5000/users',{
+      fetch('https://guarded-everglades-58080.herokuapp.com/users',{
         method:method,
         headers:{
           'content-type': 'application/json'

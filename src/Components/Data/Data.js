@@ -5,7 +5,7 @@ import Show from '../Show/Show';
 const Data = () => {
     const[cards, setCards] = useState([]);
     useEffect(()=>{
-        fetch('http://localhost:5000/products')
+        fetch('https://guarded-everglades-58080.herokuapp.com/products')
         .then(res=>res.json())
         .then(data=>setCards(data)) 
     },[])

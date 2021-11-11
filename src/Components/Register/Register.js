@@ -1,12 +1,15 @@
 import React, { useState } from 'react';
 import { Button, Form, Spinner } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useHistory } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
 
 const Register = () => {
     const[loginData, setLoginData] = useState({});
-    const{user, registerUser, isLoading, authError} = useAuth();
+    const{ registerUser, isLoading} = useAuth();
 
+
+    const location = useLocation();
+    const history = useHistory();
 
     const handleOnBlur = e =>{
         const field = e.target.name;
@@ -24,7 +27,7 @@ const Register = () => {
             alert('Your password didnt match')
             return
         }
-        registerUser(loginData.email, loginData.password, loginData.name);
+        registerUser(loginData.email, loginData.password, loginData.name, location, history);
         e.preventDefault();
         // console.log( loginData.email)
     }
@@ -52,7 +55,7 @@ const Register = () => {
   <Button variant="primary" type="submit">
     Login
   </Button>
-  <Link to="/login">New User? Please Register</Link>
+  <Link to="/login">Login page</Link>
 </Form>}
 {isLoading && <Spinner animation="border" variant="danger" />}
 {/* {user?.email && alert('User Create Successfully!')} */}

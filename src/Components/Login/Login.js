@@ -30,7 +30,7 @@ const Login = () => {
       signInWithGoogle(location, history)
     }
     return (
-        <div>
+        <div className="text-center">
 <Form onSubmit={handleLoginSubmit}>
   <Form.Group className="mb-3 w-50" controlId="formBasicEmail" >
     <Form.Label>Email address</Form.Label>
